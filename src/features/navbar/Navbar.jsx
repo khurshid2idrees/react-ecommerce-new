@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { Fragment } from 'react'
+import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const user = {
 
@@ -20,7 +21,6 @@ const navigation = [
 
 ]
 const userNavigation = [
-
 
   { name: 'Your Profile', href: '#' },
   { name: 'Settings', href: '#' },
@@ -66,7 +66,8 @@ export default function Navbar({ children }) {
                 </div>
                 <div className="hidden md:block">
                   <div className="ml-4 flex items-center md:ml-6 text-white">
-                    <button
+                <Link to="/cart">
+                <button
                       type="button"
                       className="z-0 relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                     >
@@ -76,6 +77,7 @@ export default function Navbar({ children }) {
 
                     </button>
 
+                </Link>
                     <span className="z-10 inline-flex items-center rounded-md mb-5 -ml-3 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
                       3
                     </span>
@@ -160,6 +162,7 @@ export default function Navbar({ children }) {
                     <div className="text-base font-medium leading-none text-white">{user.name}</div>
                     <div className="text-sm font-medium leading-none text-gray-400">{user.email}</div>
                   </div>
+                  <Link to="/cart">
                   <button
                     type="button"
                     className="z-0 relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -169,7 +172,7 @@ export default function Navbar({ children }) {
                     <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
                    
                   </button>
-
+                  </Link>
                   <span className="inline-flex items-center rounded-md mb-7 -ml-3 z-10 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
                       3
                     </span>
