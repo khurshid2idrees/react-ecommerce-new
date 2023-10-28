@@ -17,7 +17,7 @@ export function fetchProductsByFilters(filter) {
   // TODO : on server we will support multi values
   let queryString = '';
   for(let key in filter){
-   queryString += `${key}=${filter[key]}`  
+   queryString += `${key}=${filter[key]}&`  
   }
   return new Promise(async(resolve) =>{
 
