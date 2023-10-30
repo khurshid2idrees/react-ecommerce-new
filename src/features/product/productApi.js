@@ -13,10 +13,13 @@ export function fetchAllProducts() {
 
 export function fetchProductsByFilters(filter) {
  
-  // filter = {"category":"smarthphone"}
+  // filter = {"category":"smarthphone","laptops"}
+  // sort = {_sort:price,_order ="desc"}
   // TODO : on server we will support multi values
   let queryString = '';
   for(let key in filter){
+   const categoryValues = filter[key]
+   const lastCategoryValue = categoryValues[categoryValues.length-1]
    queryString += `${key}=${filter[key]}&`  
   }
   return new Promise(async(resolve) =>{
