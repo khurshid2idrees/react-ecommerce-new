@@ -313,7 +313,7 @@ export default function ProductDetail() {
                 { highlights.map((highlight) => (
                   <li key={highlight} className="text-gray-400">
                     <span className="text-gray-600">{highlight}</span>
-                  </li>
+                  </li>   
                 ))}
               </ul>
             </div>
