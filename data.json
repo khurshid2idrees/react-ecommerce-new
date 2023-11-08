@@ -2338,46 +2338,57 @@
     {
       "email": "samosa@samosa.com",
       "password": "Samosa@123",
+      "addresses": [],
       "id": 1
     },
     {
       "email": "Samosa@samosa.com",
       "password": "Samosa@123#",
+      "addresses": [
+        {
+          "name": "harry test ",
+          "email": "harry@harry.com",
+          "phone": "983423894",
+          "street": "uttam nagar ",
+          "city": "new delhi",
+          "state": " delhi",
+          "pinCode": "7328723"
+        },
+        {
+          "name": "mr khan ",
+          "email": "khan@khan.com",
+          "phone": "29834832",
+          "street": "khanpur",
+          "city": "new delhi",
+          "state": "delhi",
+          "pinCode": "28934234"
+        },
+        {
+          "name": "kd ",
+          "email": "kd@kd.com",
+          "phone": "2839473248",
+          "street": "kd ",
+          "city": "mumbai ",
+          "state": "navi mumbai ",
+          "pinCode": "8937432"
+        }
+      ],
       "id": 2
     },
     {
       "email": "kachori@kachori.com",
       "password": "Kachori@123#",
+      "addresses": [],
       "id": 3
     },
     {
       "email": "Kdedris@gmail.com",
       "password": "Khurshid@123",
+      "addresses": [],
       "id": 4
     }
   ],
   "cart": [
-    {
-      "id": 74,
-      "title": "Leather Hand Bag",
-      "description": "It features an attractive design that makes it a must have accessory in your collection. We sell different kind of bags for boys, kids, women, girls and also for unisex.",
-      "price": 57,
-      "discountPercentage": 11.19,
-      "rating": 4.01,
-      "stock": 43,
-      "brand": "Copenhagen Luxe",
-      "category": "womens-bags",
-      "thumbnail": "https://i.dummyjson.com/data/products/74/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/74/1.jpg",
-        "https://i.dummyjson.com/data/products/74/2.jpg",
-        "https://i.dummyjson.com/data/products/74/3.jpg",
-        "https://i.dummyjson.com/data/products/74/4.jpg",
-        "https://i.dummyjson.com/data/products/74/thumbnail.jpg"
-      ],
-      "quantity": 1,
-      "user": 2
-    },
     {
       "id": 35,
       "title": "3 DOOR PORTABLE",
@@ -2459,6 +2470,165 @@
       ],
       "quantity": 1,
       "user": 4
+    },
+    {
+      "title": "Microsoft Surface Laptop 4",
+      "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+      "price": 1499,
+      "discountPercentage": 10.23,
+      "rating": 4.43,
+      "stock": 68,
+      "brand": "Microsoft Surface",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/8/1.jpg",
+        "https://i.dummyjson.com/data/products/8/2.jpg",
+        "https://i.dummyjson.com/data/products/8/3.jpg",
+        "https://i.dummyjson.com/data/products/8/4.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+      ],
+      "quantity": 5,
+      "user": 2,
+      "id": 101
+    }
+  ],
+  "orders": [
+    {
+      "items": [
+        {
+          "title": "Microsoft Surface Laptop 4",
+          "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+          "price": 1499,
+          "discountPercentage": 10.23,
+          "rating": 4.43,
+          "stock": 68,
+          "brand": "Microsoft Surface",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/8/1.jpg",
+            "https://i.dummyjson.com/data/products/8/2.jpg",
+            "https://i.dummyjson.com/data/products/8/3.jpg",
+            "https://i.dummyjson.com/data/products/8/4.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ],
+          "quantity": 5,
+          "user": 2,
+          "id": 101
+        }
+      ],
+      "totalAmount": 7495,
+      "totalItems": 5,
+      "user": {
+        "email": "Samosa@samosa.com",
+        "password": "Samosa@123#",
+        "addresses": [
+          {
+            "name": "harry test ",
+            "email": "harry@harry.com",
+            "phone": "983423894",
+            "street": "uttam nagar ",
+            "city": "new delhi",
+            "state": " delhi",
+            "pinCode": "7328723"
+          },
+          {
+            "name": "mr khan ",
+            "email": "khan@khan.com",
+            "phone": "29834832",
+            "street": "khanpur",
+            "city": "new delhi",
+            "state": "delhi",
+            "pinCode": "28934234"
+          },
+          {
+            "name": "kd ",
+            "email": "kd@kd.com",
+            "phone": "2839473248",
+            "street": "kd ",
+            "city": "mumbai ",
+            "state": "navi mumbai ",
+            "pinCode": "8937432"
+          }
+        ],
+        "id": 2
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": null,
+      "id": 1
+    },
+    {
+      "items": [
+        {
+          "title": "Microsoft Surface Laptop 4",
+          "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+          "price": 1499,
+          "discountPercentage": 10.23,
+          "rating": 4.43,
+          "stock": 68,
+          "brand": "Microsoft Surface",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/8/1.jpg",
+            "https://i.dummyjson.com/data/products/8/2.jpg",
+            "https://i.dummyjson.com/data/products/8/3.jpg",
+            "https://i.dummyjson.com/data/products/8/4.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ],
+          "quantity": 5,
+          "user": 2,
+          "id": 101
+        }
+      ],
+      "totalAmount": 7495,
+      "totalItems": 5,
+      "user": {
+        "email": "Samosa@samosa.com",
+        "password": "Samosa@123#",
+        "addresses": [
+          {
+            "name": "harry test ",
+            "email": "harry@harry.com",
+            "phone": "983423894",
+            "street": "uttam nagar ",
+            "city": "new delhi",
+            "state": " delhi",
+            "pinCode": "7328723"
+          },
+          {
+            "name": "mr khan ",
+            "email": "khan@khan.com",
+            "phone": "29834832",
+            "street": "khanpur",
+            "city": "new delhi",
+            "state": "delhi",
+            "pinCode": "28934234"
+          },
+          {
+            "name": "kd ",
+            "email": "kd@kd.com",
+            "phone": "2839473248",
+            "street": "kd ",
+            "city": "mumbai ",
+            "state": "navi mumbai ",
+            "pinCode": "8937432"
+          }
+        ],
+        "id": 2
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "mr khan ",
+        "email": "khan@khan.com",
+        "phone": "29834832",
+        "street": "khanpur",
+        "city": "new delhi",
+        "state": "delhi",
+        "pinCode": "28934234"
+      },
+      "id": 2
     }
   ]
 }
