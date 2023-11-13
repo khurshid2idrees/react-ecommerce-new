@@ -2388,138 +2388,33 @@
       "id": 4
     }
   ],
-  "cart": [
-    {
-      "id": 35,
-      "title": "3 DOOR PORTABLE",
-      "description": "Material: Stainless Steel and Fabric  Item Size: 110 cm x 45 cm x 175 cm Package Contents: 1 Storage Wardrobe",
-      "price": 41,
-      "discountPercentage": 7.98,
-      "rating": 4.06,
-      "stock": 68,
-      "brand": "AmnaMart",
-      "category": "furniture",
-      "thumbnail": "https://i.dummyjson.com/data/products/35/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/35/1.jpg",
-        "https://i.dummyjson.com/data/products/35/2.jpg",
-        "https://i.dummyjson.com/data/products/35/3.jpg",
-        "https://i.dummyjson.com/data/products/35/4.jpg",
-        "https://i.dummyjson.com/data/products/35/thumbnail.jpg"
-      ],
-      "quantity": 1,
-      "user": 4
-    },
-    {
-      "id": 60,
-      "title": "Stylish Casual Jeans Shoes",
-      "description": "High Quality ,Stylish design ,Comfortable wear ,FAshion ,Durable",
-      "price": 58,
-      "discountPercentage": 7.55,
-      "rating": 4.55,
-      "stock": 129,
-      "brand": "Sneakers",
-      "category": "mens-shoes",
-      "thumbnail": "https://i.dummyjson.com/data/products/60/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/60/1.jpg",
-        "https://i.dummyjson.com/data/products/60/2.jpg",
-        "https://i.dummyjson.com/data/products/60/3.jpg",
-        "https://i.dummyjson.com/data/products/60/thumbnail.jpg"
-      ],
-      "quantity": 1,
-      "user": 4
-    },
-    {
-      "id": 90,
-      "title": "Cycle Bike Glow",
-      "description": "Universal fitment and easy to install no special wires, can be easily installed and removed. Fits most standard tyre air stem valves of road, mountain bicycles, motocycles and cars.Bright led will turn on w",
-      "price": 35,
-      "discountPercentage": 11.08,
-      "rating": 4.1,
-      "stock": 63,
-      "brand": "Neon LED Light",
-      "category": "automotive",
-      "thumbnail": "https://i.dummyjson.com/data/products/90/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/90/1.jpg",
-        "https://i.dummyjson.com/data/products/90/2.jpg",
-        "https://i.dummyjson.com/data/products/90/3.jpg",
-        "https://i.dummyjson.com/data/products/90/4.jpg",
-        "https://i.dummyjson.com/data/products/90/thumbnail.jpg"
-      ],
-      "quantity": 1,
-      "user": 4
-    },
-    {
-      "id": 100,
-      "title": "Crystal chandelier maria theresa for 12 light",
-      "description": "Crystal chandelier maria theresa for 12 light",
-      "price": 47,
-      "discountPercentage": 16,
-      "rating": 4.74,
-      "stock": 133,
-      "brand": "YIOSI",
-      "category": "lighting",
-      "thumbnail": "https://i.dummyjson.com/data/products/100/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/100/1.jpg",
-        "https://i.dummyjson.com/data/products/100/2.jpg",
-        "https://i.dummyjson.com/data/products/100/3.jpg",
-        "https://i.dummyjson.com/data/products/100/thumbnail.jpg"
-      ],
-      "quantity": 1,
-      "user": 4
-    },
-    {
-      "title": "Microsoft Surface Laptop 4",
-      "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
-      "price": 1499,
-      "discountPercentage": 10.23,
-      "rating": 4.43,
-      "stock": 68,
-      "brand": "Microsoft Surface",
-      "category": "laptops",
-      "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/8/1.jpg",
-        "https://i.dummyjson.com/data/products/8/2.jpg",
-        "https://i.dummyjson.com/data/products/8/3.jpg",
-        "https://i.dummyjson.com/data/products/8/4.jpg",
-        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-      ],
-      "quantity": 5,
-      "user": 2,
-      "id": 101
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "items": [
         {
-          "title": "Microsoft Surface Laptop 4",
-          "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
-          "price": 1499,
-          "discountPercentage": 10.23,
+          "title": "HP Pavilion 15-DK1056WM",
+          "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+          "price": 1099,
+          "discountPercentage": 6.18,
           "rating": 4.43,
-          "stock": 68,
-          "brand": "Microsoft Surface",
+          "stock": 89,
+          "brand": "HP Pavilion",
           "category": "laptops",
-          "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+          "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
           "images": [
-            "https://i.dummyjson.com/data/products/8/1.jpg",
-            "https://i.dummyjson.com/data/products/8/2.jpg",
-            "https://i.dummyjson.com/data/products/8/3.jpg",
-            "https://i.dummyjson.com/data/products/8/4.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+            "https://i.dummyjson.com/data/products/10/1.jpg",
+            "https://i.dummyjson.com/data/products/10/2.jpg",
+            "https://i.dummyjson.com/data/products/10/3.jpg",
+            "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
           ],
-          "quantity": 5,
+          "quantity": 1,
           "user": 2,
-          "id": 101
+          "id": 1
         }
       ],
-      "totalAmount": 7495,
-      "totalItems": 5,
+      "totalAmount": 1099,
+      "totalItems": 1,
       "user": {
         "email": "Samosa@samosa.com",
         "password": "Samosa@123#",
@@ -2554,71 +2449,7 @@
         ],
         "id": 2
       },
-      "paymentMethod": "cash",
-      "selectedAddress": null,
-      "id": 1
-    },
-    {
-      "items": [
-        {
-          "title": "Microsoft Surface Laptop 4",
-          "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
-          "price": 1499,
-          "discountPercentage": 10.23,
-          "rating": 4.43,
-          "stock": 68,
-          "brand": "Microsoft Surface",
-          "category": "laptops",
-          "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/8/1.jpg",
-            "https://i.dummyjson.com/data/products/8/2.jpg",
-            "https://i.dummyjson.com/data/products/8/3.jpg",
-            "https://i.dummyjson.com/data/products/8/4.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ],
-          "quantity": 5,
-          "user": 2,
-          "id": 101
-        }
-      ],
-      "totalAmount": 7495,
-      "totalItems": 5,
-      "user": {
-        "email": "Samosa@samosa.com",
-        "password": "Samosa@123#",
-        "addresses": [
-          {
-            "name": "harry test ",
-            "email": "harry@harry.com",
-            "phone": "983423894",
-            "street": "uttam nagar ",
-            "city": "new delhi",
-            "state": " delhi",
-            "pinCode": "7328723"
-          },
-          {
-            "name": "mr khan ",
-            "email": "khan@khan.com",
-            "phone": "29834832",
-            "street": "khanpur",
-            "city": "new delhi",
-            "state": "delhi",
-            "pinCode": "28934234"
-          },
-          {
-            "name": "kd ",
-            "email": "kd@kd.com",
-            "phone": "2839473248",
-            "street": "kd ",
-            "city": "mumbai ",
-            "state": "navi mumbai ",
-            "pinCode": "8937432"
-          }
-        ],
-        "id": 2
-      },
-      "paymentMethod": "cash",
+      "paymentMethod": "card",
       "selectedAddress": {
         "name": "mr khan ",
         "email": "khan@khan.com",
@@ -2628,7 +2459,8 @@
         "state": "delhi",
         "pinCode": "28934234"
       },
-      "id": 2
+      "status": "pending",
+      "id": 1
     }
   ]
 }

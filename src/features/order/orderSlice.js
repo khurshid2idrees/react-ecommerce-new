@@ -4,13 +4,11 @@ import { createOrder } from './orderAPI';
 const initialState = {
   orders: [],
   status: 'idle',
+  currentOrder:null
 };
 
-// The function below is called a thunk and allows us to perform async logic. It
-// can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
-// will call the thunk with the `dispatch` function as the first argument. Async
-// code can then be executed and other actions can be dispatched. Thunks are
-// typically used to make async requests.
+// we may need more info of current order
+
 export const createOrderAsync = createAsyncThunk(
   'order/createOrder',
   async (order) => {
@@ -20,29 +18,31 @@ export const createOrderAsync = createAsyncThunk(
   }
 );
 
-export const counterSlice = createSlice({
+export const orderSlice = createSlice({
   name: 'order',
   initialState,
   reducers: {
-    increment: (state) => {
-      
-      state.value += 1;
-    },
+    resetOrder: (state)=>{
+     state.currentOrder = null;
+    }
     
   },
 
   extraReducers: (builder) => {
     builder
       .addCase(createOrderAsync.pending, (state) => {
-        state.status = 'loading';
+        state.status = 'loading'; 
       })
       .addCase(createOrderAsync.fulfilled, (state, action) => {
         state.status = 'idle';
         state.orders.push(action.payload);
+        state.currentOrder = action.payload;
       });
   },
 });
 
-export const { increment} = counterSlice.actions;
+export const { resetOrder} = orderSlice.actions;
 
-export default counterSlice.reducer;
+export const SelectCurrentOrder = (state)=> state.order.currentOrder;
+
+export default orderSlice.reducer;

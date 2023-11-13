@@ -8,10 +8,11 @@ import {
 } from "../features/cart/cartSlice";
 import { Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { selectLoggedInUser, updateUserAsync } from "../features/auth/authSlice";
-import {createOrderAsync} from '../features/order/orderSlice'
-
-
+import {
+  selectLoggedInUser,
+  updateUserAsync,
+} from "../features/auth/authSlice";
+import { SelectCurrentOrder, createOrderAsync } from "../features/order/orderSlice";
 
 export default function Checkout() {
   const {
@@ -21,11 +22,11 @@ export default function Checkout() {
     formState: { errors },
   } = useForm();
 
-  const user = useSelector(selectLoggedInUser)
-
+  const user = useSelector(selectLoggedInUser);
+  const items = useSelector(selectItems);
+  const currentOrder = useSelector(SelectCurrentOrder)
   const dispatch = useDispatch();
   const [open, setOpen] = useState(true);
-  const items = useSelector(selectItems);
   const totalAmount = items.reduce(
     (amount, item) => item.price * item.quantity + amount,
     0
@@ -33,9 +34,8 @@ export default function Checkout() {
 
   const totalItems = items.reduce((total, item) => item.quantity + total, 0);
 
-  const[selectedAddress, setSelectedAddress] = useState(null);
-  const[paymentMethod, setPaymentMethod] = useState('cash');
-
+  const [selectedAddress, setSelectedAddress] = useState(null);
+  const [paymentMethod, setPaymentMethod] = useState("cash");
 
   const handleQuantity = (e, item) => {
     dispatch(updateCartAsync({ ...item, quantity: +e.target.value }));
@@ -45,32 +45,37 @@ export default function Checkout() {
     dispatch(deleteItemFromCartAsync(id));
   };
 
-  const handleAddress = (e)=>{
-    console.log(e.target.value)
+  const handleAddress = (e) => {
+    console.log(e.target.value);
     setSelectedAddress(user.addresses[e.target.value]);
-  }
+  };
 
-
-  const handlePayment = (e)=>{
-    console.log(e.target.value)
+  const handlePayment = (e) => {
+    console.log(e.target.value);
     setPaymentMethod(e.target.value);
-  }
+  };
 
-
-  const handleOrder = (e)=>{
-    const order = {items,totalAmount,totalItems,user, paymentMethod,selectedAddress}
+  const handleOrder = (e) => {
+    const order = {
+      items,
+      totalAmount,
+      totalItems,
+      user,
+      paymentMethod,
+      selectedAddress,
+      status:"pending"   // other status can be delivered, received.
+    };
     dispatch(createOrderAsync(order));
 
-    // TODO: redirect to order-success page 
+    // TODO: redirect to order-success page
     // TODO : clear cart after order
     // TODO : on server change the stock number
-  }
-
-  
+  };
 
   return (
     <>
       {!items.length && <Navigate to="/" replace={true}></Navigate>}
+      {currentOrder && <Navigate to={`/order-success/${currentOrder.id}`} replace={true}></Navigate> }
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
           <div className="lg:col-span-3">
@@ -80,11 +85,13 @@ export default function Checkout() {
               onSubmit={handleSubmit((data) => {
                 console.log(data);
                 dispatch(
-                  updateUserAsync({...user, addresses:[...user.addresses, data]})
+                  updateUserAsync({
+                    ...user,
+                    addresses: [...user.addresses, data],
+                  })
                 );
 
-                reset()
-
+                reset();
               })}
             >
               <div className="space-y-12">
@@ -143,7 +150,7 @@ export default function Checkout() {
                         Phone
                       </label>
                       <div className="mt-2">
-                      <input
+                        <input
                           id="phone"
                           {...register("phone", {
                             required: "phone is required",
@@ -255,14 +262,14 @@ export default function Checkout() {
                     Choose from existing address
                   </p>
                   <ul role="list" className="divide-y divide-gray-100">
-                    {user.addresses.map((address,index) => (
+                    {user.addresses.map((address, index) => (
                       <li
                         key={index}
                         className="flex justify-between gap-x-6 px-5 py-5 border-solid border-2 border-gray-200"
                       >
                         <div className="flex min-w-0 gap-x-4">
                           <input
-                          onChange={handleAddress}
+                            onChange={handleAddress}
                             name="address"
                             type="radio"
                             value={index}
@@ -311,9 +318,9 @@ export default function Checkout() {
                             id="cash"
                             name="payments"
                             onChange={handlePayment}
-                            value='cash'
+                            value="cash"
                             type="radio"
-                            checked = {paymentMethod==='cash'}
+                            checked={paymentMethod === "cash"}
                             className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           />
                           <label
@@ -328,9 +335,9 @@ export default function Checkout() {
                             id="card"
                             onChange={handlePayment}
                             name="payments"
-                            value='card'
+                            value="card"
                             type="radio"
-                            checked = {paymentMethod==='card'}
+                            checked={paymentMethod === "card"}
                             className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           />
                           <label
@@ -445,10 +452,10 @@ export default function Checkout() {
                 </p>
                 <div className="mt-6">
                   <div
-                     onClick={handleOrder}
+                    onClick={handleOrder}
                     className="flex cursor-pointer items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                   >
-                    Order Now 
+                    Order Now
                   </div>
                 </div>
                 <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
